@@ -5,7 +5,7 @@ public class SistemaNomina {
 
     
     public static void main(String[] args) {
-        System.out.println("Se procesan empleados por separado");
+        System.out.println("----->Se procesan empleados por separado<-----");
 
         EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Alexis"," Molina","123",800.00);
         EmpleadoBaseMasComision empleadoBaseMasComision = new EmpleadoBaseMasComision ("Ricardo"," Molina","720",2000,0.2,1900);
@@ -22,7 +22,12 @@ public class SistemaNomina {
         empleados[1]=empleadoBaseMasComision;
         empleados[2]=empleadoPorComision;
         empleados[3]=empleadoPorHoras;
-
+        
+        System.out.println("----->Se procesan empleados<-----");
+        for (int i = 0; i < empleados.length; i++) {
+            
+        }
+       
     }
     }
     

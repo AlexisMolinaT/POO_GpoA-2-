@@ -5,6 +5,7 @@ public class SistemaNomina {
 
     
     public static void main(String[] args) {
+        /*
         System.out.println("----->Se procesan empleados por separado<-----");
 
         EmpleadoAsalariado empleadoAsalariado = new EmpleadoAsalariado("Alexis"," Molina","123",800.00);
@@ -39,9 +40,40 @@ public class SistemaNomina {
         System.out.println("----->Se procesan empleados (en un arreglo)<-----");
         for (int j = 0; j < empleados.length; j++) {
             System.out.printf("El empleado %d es un %s\n",j,empleados[j].getClass().getName());
+        }*/
+        
+        //uso de nterface por pagar
+      PorPagar[] objetosPorPagar = new PorPagar[4]; 
+   
+  // se llama al arreglo con objetos que implementan la interfaz: "PorPagar" 
+
+  objetosPorPagar[0]= new Factura("0123","silla",2,375.00); 
+  objetosPorPagar[1]= new Factura("01234","escritorio",3,79.55); 
+
+   
+
+  objetosPorPagar[2]= new EmpleadoAsalariado("Alexis ","Molina ","1111",800.00); 
+  objetosPorPagar[3]= new EmpleadoAsalariado("Valeria "," Perez ","2222",1800.00); 
+
+   
+
+        System.out.println("Facturas y Empleados procesados en forma polimorfica: \n"); 
+  // se procesan de forma generica cada elemento del arreglo "objetosPorPagar". 
+
+   
+
+    for(PorPagar porPagarActual:objetosPorPagar){ 
+        // se imprime por Pagar Actual y su  monto de pago apropiado 
+        
+        System.out.printf("%s \n%s: $%,.2f\n\n",porPagarActual.toString(),"Pago vencido",porPagarActual.obtenerMontoPago()); 
+
+    } 
+                    
         }
+        
+      
     }
-}
+
     
     
     
